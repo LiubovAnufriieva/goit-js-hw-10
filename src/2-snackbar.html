@@ -16,24 +16,33 @@
 
     
     <form class="form">
-      <label>
-        Delay (ms)
-        <input class="delay-input" type="number" name="delay" required />
-      </label>
-    
-      <fieldset>
-        <legend>State</legend>
-        <label class="form-label-1">
-          <input type="radio" name="state" value="fulfilled" required />
-          Fulfilled
+      <div class="delay-input-div">
+        <label class="delay-label">
+          Delay (ms)
+          <input class="delay-input" type="number" name="delay" required />
         </label>
-        <label>
-          <input type="radio" name="state" value="rejected" required />
-          Rejected
-        </label>
-      </fieldset>
+      </div>
     
-      <button type="submit">Create notification</button>
+      <div class="state-div">
+        <fieldset>
+          <legend>State</legend>
+
+          <div class="state-label-div">
+            <label class="form-label">
+              <input type="radio" name="state" value="fulfilled" required />
+              Fulfilled
+            </label>
+          </div>
+          <div class="delay-label-div">
+            <label class="form-label">
+              <input type="radio" name="state" value="rejected" required />
+              Rejected
+            </label>
+          </div>
+        </fieldset>
+      </div>
+    
+      <button class="delay-btn" type="submit">Create notification</button>
     </form>
     
 
