@@ -5,7 +5,9 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.form');
 
-form.addEventListener('submit', function (event) {
+form.addEventListener('submit', onSubmit);
+
+function onSubmit (event) {
   event.preventDefault();
 
   const delayInput = document.querySelector('.delay-input');
@@ -36,4 +38,4 @@ form.addEventListener('submit', function (event) {
         message: `❌ Rejected promise in ${delay}ms`,
       });
     });
-});
+  }
