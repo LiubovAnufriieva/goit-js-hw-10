@@ -29,12 +29,14 @@ function onSubmit (event) {
     .then(delay => {
       iziToast.success({
         title: 'Success',
+        position: 'topCenter',
         message: `✅ Fulfilled promise in ${delay}ms`,
       });
     })
     .catch(delay => {
       iziToast.error({
         title: 'Error',
+        position: 'topCenter',
         message: `❌ Rejected promise in ${delay}ms`,
       });
     });
