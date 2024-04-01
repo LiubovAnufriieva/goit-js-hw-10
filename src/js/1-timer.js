@@ -50,8 +50,8 @@ function startTimer() {
   }
 
   timerCount = setInterval(function () {
-    const now = new Date().getTime();
-    const remainingTime = userSelectedDate.getTime() - now;
+    const currentTime = new Date().getTime();
+    const remainingTime = userSelectedDate.getTime() - currentTime;
 
     if (remainingTime <= 0) {
       clearInterval(timerCount);
@@ -74,13 +74,10 @@ function updateTimerDisplay(remainingTime) {
     return String(value).padStart(2, '0');
   }
 
-
   document.querySelector('[data-days]').textContent = addLeadingZero(days);
   document.querySelector('[data-hours]').textContent = addLeadingZero(hours);
-  document.querySelector('[data-minutes]').textContent =
-    addLeadingZero(minutes);
-  document.querySelector('[data-seconds]').textContent =
-    addLeadingZero(seconds);
+  document.querySelector('[data-minutes]').textContent = addLeadingZero(minutes);
+  document.querySelector('[data-seconds]').textContent = addLeadingZero(seconds);
 }
 
 function convertMs(ms) {
